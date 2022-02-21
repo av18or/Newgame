@@ -9,16 +9,17 @@
 </head>
 <body>
     <!--game .board consisting of 9 divs with class name of "cell"-->
+    <!--use data-index to access columns, index number, and parent -->
     <div class="board">
-        <div class="x-hover cell" class="cell0"></div>
-        <div class="o-hover cell" class="cell1"></div>
-        <div class="cell" class="cell2"></div>
-        <div class="cell" class="cell3"></div>
-        <div class="cell" class="cell4"></div>
-        <div class="cell" class="cell5"></div>
-        <div class="cell" class="cell6"></div>
-        <div class="cell" class="cell7"></div>
-        <div class="cell" class="cell8"></div>
+        <div data-index="1" class="cell"></div>
+        <div data-index="2" class="cell"></div>
+        <div data-index="3" class="cell"></div>
+        <div data-index="4" class="cell"></div>
+        <div data-index="5" class="cell"></div>
+        <div data-index="6" class="cell"></div>
+        <div data-index="7" class="cell"></div>
+        <div data-index="8" class="cell"></div>
+        <div data-index="9" class="cell"></div>
       </div>
 
       <!-- span to display player turns message -->
@@ -28,7 +29,7 @@
 
       <!--reset button-->
       <div class="controls">
-          <button id="Reset">Reset</button>
+          <button id="reset">Reset</button>
       </div>
 
 <script src="code.js" defer></script>    
