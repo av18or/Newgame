@@ -16,7 +16,7 @@ gameBoard.fill(null);  // fill in the gameboard array with values of null
 //console.log(gameBoard);
 
 
-//HTML elements
+// connect our HTML elements
 const gameOverArea = document.getElementById("game-over-area");
 const gameOverText = document.getElementById("game-over-text");
 const playAgain = document.getElementById("play-again");
@@ -53,7 +53,7 @@ function hoverText() {
     })
 }
 
-
+hoverText(); // call hoverText function so first move letter (x) displays on hover.
  
 
 //define cellClick function. event gives us which box was clicked.
@@ -82,5 +82,15 @@ function cellClick(event){
     }
     longBeep.play();  //calls our audio function and plays a sound with each move
 
-    hoverText();  // call our hoverText function
+    hoverText();  // call our hoverText function again so correct alternating turn letters also display on hover. 
 }
+
+
+//function startNewGame() {
+ //   strike.className = "strike";
+ //   gameOverArea.className = "hidden";
+ //   boardState.fill(null);
+ //   tiles.forEach((tile) => (tile.innerText = ""));
+ //   turn = PLAYER_X;
+ //   hoverText();
+//  }

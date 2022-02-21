@@ -34,6 +34,26 @@ body {
     background-color: white;
   }
 
+
+/* display X letter on hover*/
+.x-hover:hover::after {
+    content: "X";
+    color: black;
+    opacity: 0.5;
+    font-family: arial;
+    font-size: 6rem;
+}
+ /* display O letter on hover */
+.o-hover:hover::after {
+    content: "O";
+    color: black;
+    opacity: 0.5;
+    font-family: arial;
+    font-size: 6rem;
+}
+
+
+
   /* adds animation on hover of each .cell class. (makes each square spin) */
   .cell:hover {
     animation-duration: .5s;
@@ -49,25 +69,6 @@ body {
   .visible {
     display: block;
   }
-
-
-
- /* display X letter on hover*/
- .x-hover:hover::after {
-    content: "X";
-    color: black;
-    opacity: 1.0;
-    font-family: arial;
-    font-size: 6rem;
-}
- /* display O letter on hover */
-.o-hover:hover::after {
-    content: "O";
-    color: black;
-    opacity: 1.0;
-    font-family: arial;
-    font-size: 6rem;
-}
 
 
   /* this keyframe defines paramaters for our "spin1" animation */
