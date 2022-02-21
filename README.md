@@ -33,6 +33,8 @@ MDN Web Docs: https://developer.mozilla.org/en-US/
 
 Slider Revolution: https://www.sliderrevolution.com/
 
+Pixabay: https://pixabay.com
+
 YouTube: https://www.youtube.com 
 
 
