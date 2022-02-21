@@ -33,7 +33,7 @@ MDN Web Docs: https://developer.mozilla.org/en-US/
 
 Slider Revolution: https://www.sliderrevolution.com/
 
-Pixabay: https://pixabay.com
+background video by tunnelmotions on Pixabay: https://pixabay.com/users/tunnelmotions-12767861/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=26475
 
 YouTube: https://www.youtube.com 
 

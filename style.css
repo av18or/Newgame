@@ -10,7 +10,7 @@ body {
 h1 {
   font-family: arial;
   text-align: center;
-  padding-top: 5rem;
+  padding-top: 14rem;
 }
 
 /* style .board class */
@@ -124,7 +124,7 @@ h1 {
     left: 0;
     height: 100%;
     width: 100%;
-    opacity: 0.4;
+    opacity: 0.3;
   
   }
   .video-wrapper {
@@ -137,6 +137,7 @@ h1 {
     align-items: center;
     justify-content: center;
   }
+  
   
 
 
