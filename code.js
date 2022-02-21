@@ -37,24 +37,25 @@ cells.forEach((cell) => cell.addEventListener('click', cellClick))  //loop throu
 
 // this function will display x or o text on hover. 
 function hoverText() {
-    // using forEach to loop through the cells, we will remove hover text
-    cells.forEach(cell => {  //code block runs to remove x-hover or o-hover 
+    // using forEach to loop through the cells, we will remove text
+    cells.forEach(cell => {  //arrow function with code block that runs to remove x-hover or o-hover 
         cell.classList.remove("x-hover");  // using the classList property allows us to add or remove CSS classes on an element!
         cell.classList.remove("o-hover");
     });
 
-    // using a string template allows us to switch between both x and o.
-    const hoverClass = `${turn.toLowerCase()}-hover`;   
+    // hoverClass variable to define which classList to use based on who's turn it is
+    const hoverClass = `${turn.toLowerCase()}-hover`;  
+    //string template is used to change current turn to lower case letter using toLowerCase method (either o-hover, or x-hover)
 
-    cells.forEach((cell) => {         //loop through the cells, 
-        if (cell.innerText == "") {   //if the cell inner text is equal to x or o-hover, 
-            cell.classList.add(hoverClass);  //add the appropriate hoverClass defined above.
+    cells.forEach((cell) => {         //loop through the cells, use arrow function to run code block
+        if (cell.innerText == "") {   //if the cell inner text is equal to "" (x-hover or o-hover), 
+            cell.classList.add(hoverClass);  //using the classList property, adds the appropriate hoverClass defined above.
         }
     })
 }
-
 hoverText(); // call hoverText function so the first move letter of x displays on hover.
  
+
 
 //define cellClick function. event paramater tells us which box was clicked.
 function cellClick(event){
@@ -66,8 +67,8 @@ function cellClick(event){
     // event.target tells us which cell was clicked. 
     const cell = event.target;
     const cellNumber = cell.dataset.index; //access cell data-index from HTML document
-    if(cell.innerText != "") { // if the cell inner text is not equal to blank, then either x/o is in the cell, or we
-        return;                 // return to exit
+    if(cell.innerText != "") { // if the cell inner text is not equal (!= non-strict inequality op) to "" (which is equal to false), then either x/o is already in the cell, or we
+        return;                 // run code block of return to exit
     }
 
         //using if, else statements to alternate between x and o's turns.
@@ -81,17 +82,33 @@ function cellClick(event){
         gameBoard[cellNumber-1] = player_o;
         turn = player_x;  //back to player x
     }
-    longBeep.play();  //calls our audio function and plays a sound with each move
+    longBeep.play();  //calls our audio function and plays the sound with each move
 
-    hoverText();  // call our hoverText function again so correct alternating turn letters also display on hover. 
+    hoverText();  
+    // call our hoverText function here so correct alternating turn letters display on hover, and not on cells that already have a letter. 
+
+    checkWinner(); //calls our checkWinner function. Checks for a winner on each cell click
 }
 
+//define checkWinner function
 
-//function startNewGame() {
- //   strike.className = "strike";
- //   gameOverArea.className = "hidden";
- //   boardState.fill(null);
- //   tiles.forEach((tile) => (tile.innerText = ""));
- //   turn = PLAYER_X;
- //   hoverText();
-//  }
+function checkWinner(){
+    for(const winCombos of winCombos) {
+        console.log(combo);
+}
+}
+// array for winning combinations
+const winCombos = [   
+    //row combos
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    //column combos
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    //diagonal combos
+    [0, 4, 8],
+    [2, 4, 6]
+    ]
+
