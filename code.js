@@ -87,28 +87,56 @@ function cellClick(event){
     hoverText();  
     // call our hoverText function here so correct alternating turn letters display on hover, and not on cells that already have a letter. 
 
-    checkWinner(); //calls our checkWinner function. Checks for a winner on each cell click
+    checkWin(); //calls our checkWinner function. Checks for a winner on each cell click
 }
 
 //define checkWinner function
+// loop over all winning combinations
+function checkWin(){
+    for(const winCombo of winCombos) {  // const winCombo of winCombos array
+        //console.log(winCombo);           // console.log winCombo to see if it works.. so far so good.
 
-function checkWinner(){
-    for(const winCombos of winCombos) {
-        console.log(combo);
+
+     //using object destructuring
+     const { combo, winClass } = winCombo;
+     const cellValue1 = gameBoard [combo[0] - 1];
+     const cellValue2 = gameBoard [combo[1] - 1];
+     const cellValue3 = gameBoard [combo[2] - 1];  
+
+     if (cellValue1 != null && cellValue1 === cellValue2 && cellValue1 === cellValue3) {
+         console.log('hello');
+
+         gameOverScreen(cellValue1);
+     }
+ }
+
+// function to check for winner
+
 }
+
+function gameOverScreen(winnerText) {
+    let text = 'Tie!'
+    if(winnerText != null) {
+        text = `Winner is ${winnerText}`;
+    }
+
+    gameOverArea.className = 'visible'; //replace hidden with visible
+    gameOverText.innerText = text;
+    winSound.play();
 }
-// array for winning combinations
+
+// objects containing arrays for winning combinations 
 const winCombos = [   
     //row combos
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
+    {combo: [1, 2, 3], winClass: "row1"},
+    {combo: [4, 5, 6], winClass: "row2"},
+    {combo: [7, 8, 9], winClass: "row3"},
     //column combos
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
+    {combo: [1, 4, 7], winClass: "column1"},
+    {combo: [2, 5, 8], winClass: "column2"},
+    {combo: [3, 6, 9], winClass: "column3"},
     //diagonal combos
-    [0, 4, 8],
-    [2, 4, 6]
-    ]
+    {combo: [1, 5, 9], winClass: "diag1"},
+    {combo: [3, 5, 7], winClass: "diag2"},
+    ];
 
