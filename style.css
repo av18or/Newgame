@@ -3,9 +3,23 @@
 
 /* style the body */
 body {
-  background-color: white;
+  background: linear-gradient(-45deg,  #234cd5, #23d5ab, rgb(102, 223, 98), #d59123);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }
 
+/* keyframe background gradient animation. Idea source: www.sliderrevolution.com */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+    background-position: 0% 50%;
+}
+}
 
 h1 {
   font-family: arial;
@@ -14,8 +28,7 @@ h1 {
 }
 
 /* style .board class */
-.board {   
-    z-index: 1;  
+.board {     
     width: 100vw;
     height: 50vh;
     display: grid;
@@ -29,7 +42,6 @@ h1 {
 
   /* style cell class */
 .cell {
-    z-index: 1;
     width: 150px;
     height: 150px;
     border: 3px solid black;
@@ -114,31 +126,6 @@ h1 {
     font-family: arial;
     border-radius: 5px;
   }
-
-/* add background video */
-  video {
-    z-index: -1;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0.3;
-  
-  }
-  .video-wrapper {
-    
-    
-    position:static;
-    overflow: hidden;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  
 
 
   /* add media query to allow for mobile device usage */
