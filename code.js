@@ -20,7 +20,7 @@ gameBoard.fill(null);  // .fill method used in order to fill the array elements.
 const gameOverArea = document.getElementById("game-over-area");
 const gameOverText = document.getElementById("game-over-text");
 const playAgain = document.getElementById("play-again");
-playAgain.addEventListener("click", startNewGame);
+playAgain.addEventListener("click", startNewGame);  //event listener for play again button
 
 
 
@@ -136,20 +136,20 @@ function gameOverScreen(winnerText) {  //pass in winnerText
 }
 
 
-//startNewGame function
+// this function will start our new game and reset everything. 
 function startNewGame(){
     gameOverArea.className = "hidden";  //hides the game over area once new game begins
-    gameBoard.fill(null);               // update all cells on the board to null
-    cells.forEach((cell) => (cell.innerText = "")); //loop through cells and update inner text to an empty string
-    turn = player_x;   // begins new game as player_x turn regardless of game result
-    hoverText();  // resets our text hover again
+    gameBoard.fill(null);               // update all cells on the board to null using .FILL METHOD
+    cells.forEach((cell) => (cell.innerText = "")); //loop through cells and update inner text to an empty string using .forEach and arrow function
+    turn = player_x;   // begins new game as player_x turn regardless of end game result
+    hoverText();  // call hoverText to reset our text hover function
 }
 
 
 
 // arrays for winning combinations 
 const winCombos = [   
-    //row combos
+    //row combos. objects with arrays
     {combo: [1, 2, 3], winClass: "row1"},
     {combo: [4, 5, 6], winClass: "row2"},
     {combo: [7, 8, 9], winClass: "row3"},

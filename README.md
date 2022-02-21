@@ -1,4 +1,4 @@
-This will be a tic tac toe game made with as little code as possible.
+This will be a tic tac toe game made with as little code as possible 
 The game is X vs O. First three in a row wins.
 # Newgame
 
@@ -25,7 +25,7 @@ https://www.youtube.com/watch?v=fPew9OI2PnA
 
 
 
-Various sources of information for the understanding and implementation of JavaScript/CSS/HTML used in this project:
+Various web sources of information for the understanding and implementation of JavaScript/CSS/HTML used in this project:
 
 W3 schools: https://www.w3schools.com/
 
@@ -34,3 +34,9 @@ MDN Web Docs: https://developer.mozilla.org/en-US/
 Slider Revolution: https://www.sliderrevolution.com/
 
 YouTube: https://www.youtube.com 
+
+
+
+Books used: 
+
+JavaScript, The Definitive Guide. by David Flanagan
