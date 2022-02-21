@@ -9,7 +9,7 @@
 </head>
 <body>
     <!--game .board consisting of 9 divs with class name of "cell"-->
-    <!--use data-index to access columns, index number, and parent -->
+    <!--use data-index to access the columns, index numbers, and parent -->
     <div class="board">
         <div data-index="1" class="cell"></div>
         <div data-index="2" class="cell"></div>
@@ -22,14 +22,10 @@
         <div data-index="9" class="cell"></div>
       </div>
 
-      <!-- span to display player turns message -->
-      <div class="turn-message">
-          Player <span class="display-player playerX"></span>'s turn
-      </div>
-
-      <!--reset button-->
-      <div class="controls">
-          <button id="reset">Reset</button>
+      <!-- div containing our game over message, and play again/reset button. include hidden class, so we can hide or display -->
+      <div id="game-over-area" class="hidden">
+        <h2 id="game-over-text">Winner is X</h2>
+        <button id="play-again">Play Again</button>
       </div>
 
 <script src="code.js" defer></script>    

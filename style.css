@@ -41,6 +41,17 @@ body {
     background-color: rgba(0, 255, 255, 0.541);
   }
 
+  /* display for our .hidden and .visible classes */
+  .hidden {
+    display: none;
+  }
+  
+  .visible {
+    display: block;
+  }
+
+
+
  /* display X letter on hover*/
  .x-hover:hover::after {
     content: "X";
@@ -51,11 +62,11 @@ body {
 }
  /* display O letter on hover */
 .o-hover:hover::after {
-content: "O";
-color: black;
-opacity: 1.0;
-font-family: arial;
-font-size: 6rem;
+    content: "O";
+    color: black;
+    opacity: 1.0;
+    font-family: arial;
+    font-size: 6rem;
 }
 
 
@@ -72,19 +83,20 @@ font-size: 6rem;
 
 
   /* styling for our turn message and reset button */
-  .turn-message {
+  #game-over-text {
       text-align: center;
       font-size: 2rem;
       font-family: arial;
   }
   
-  .controls {
-      display: flex;
+  #game-over-area {
+      text-align: center;
       justify-content: center;
       padding: 10px;
   }
 
   button {
+    
     font-size: 2rem;
     font-family: arial;
     border-radius: 5px;
