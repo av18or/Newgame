@@ -31,3 +31,25 @@ body {
     margin: 10px;
     background-color: white;
   }
+
+  /* adds animation on hover of each .cell class. (makes each square spin) */
+  .cell:hover {
+    animation-duration: 1s;
+    animation-name: spin1;
+  }
+
+  /* this keyframe defines paramaters for our "spin1" animation */
+  @keyframes spin1 { 
+    from {                          
+        transform: rotate(0deg);  /* spin FROM 0, TO 180 degrees */
+    } to { 
+        transform: rotate(180deg); 
+    }
+  }
+
+
+
+  @media only screen and (max-width: 600px) {
+
+    
+  }
