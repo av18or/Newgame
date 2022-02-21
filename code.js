@@ -20,7 +20,7 @@ gameBoard.fill(null);  // .fill method used in order to fill the array elements.
 const gameOverArea = document.getElementById("game-over-area");
 const gameOverText = document.getElementById("game-over-text");
 const playAgain = document.getElementById("play-again");
-//playAgain.addEventListener("click", startNewGame);
+playAgain.addEventListener("click", startNewGame);
 
 
 
@@ -28,7 +28,9 @@ const playAgain = document.getElementById("play-again");
 //define variables for audio. const used as they will not change. 
 const longBeep = new Audio("audio/clockbeep.mp3");
 const winSound = new Audio("audio/tada.mp3");
+winSound.volume = 0.2;        //adjust volume of audio so we don't scare people
 const tieSound = new Audio("audio/tie.wav");
+tieSound.volume = 0.2;
 
 
 // add event listeners for each cell on the board
@@ -85,7 +87,7 @@ function cellClick(event){
     longBeep.play();  //calls our audio function and plays the sound with each move
 
     hoverText();  
-    // call our hoverText function here so correct alternating turn letters display on hover, and not on cells that already have a letter. 
+    // calls our hoverText function here so correct alternating turn letters display on hover, and not on cells that already have a letter. 
 
     checkWin(); //calls our checkWinner function. Checks for a winner on each cell click
 }
@@ -97,35 +99,55 @@ function checkWin(){
         //console.log(winCombo);           // console.log winCombo to see if it works.. so far so good.
 
 
-     //using object destructuring
-     const { combo, winClass } = winCombo;
-     const cellValue1 = gameBoard [combo[0] - 1];
+     // extract the combo and winClass from winCombos array below, using Object Destructuring: "The destructuring assignment syntax is a JavaScript expression that makes it possible to 
+     //unpack values from arrays, or properties from objects, into distinct variables." - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+     const { combo, winClass } = winCombo;  //extracts the combo and winClass from our winCombo
+     const cellValue1 = gameBoard [combo[0] - 1];  // storing each value in an array (-1 as it's the first item in our array)
      const cellValue2 = gameBoard [combo[1] - 1];
      const cellValue3 = gameBoard [combo[2] - 1];  
 
+        // if cellValue1 is NOT equal to null, AND cellValue1 IS EQUAL to cellValue2 AND cellValue1 IS EQUAL to cellValue3, we have a winner.
      if (cellValue1 != null && cellValue1 === cellValue2 && cellValue1 === cellValue3) {
-         console.log('hello');
+        // console.log('win test');  //test 
 
-         gameOverScreen(cellValue1);
+         gameOverScreen(cellValue1);  //game over screen function passing in the winner
+         return;    // return to end this statment
      }
  }
 
-// function to check for winner
-
+// function to check for a tie if every square is filled in without a win
+    const allCellsFilled = gameBoard.every((cell) => cell !== null); 
+    if(allCellsFilled) {                //if allCellsFilled returns true, then..
+        gameOverScreen(null);
+    }
 }
 
-function gameOverScreen(winnerText) {
-    let text = 'Tie!'
-    if(winnerText != null) {
-        text = `Winner is ${winnerText}`;
-    }
+
+//game over screen function
+function gameOverScreen(winnerText) {  //pass in winnerText
+    let text = 'Tie!'                  // let text = tie by default
+    if(winnerText != null) {     // if our winnerText is NOT equal to null, 
+        text = `Winner is ${winnerText}`;  // using string template text is equal to either x or o. expressions in placeholders and text between backticks are passed to a function.
+    }                                      //use of template literal: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 
     gameOverArea.className = 'visible'; //replace hidden with visible
-    gameOverText.innerText = text;
-    winSound.play();
+    gameOverText.innerText = text;  //update the gameOverText.innerText
+    winSound.play();                //plays audio function
 }
 
-// objects containing arrays for winning combinations 
+
+//startNewGame function
+function startNewGame(){
+    gameOverArea.className = "hidden";  //hides the game over area once new game begins
+    gameBoard.fill(null);               // update all cells on the board to null
+    cells.forEach((cell) => (cell.innerText = "")); //loop through cells and update inner text to an empty string
+    turn = player_x;   // begins new game as player_x turn regardless of game result
+    hoverText();  // resets our text hover again
+}
+
+
+
+// arrays for winning combinations 
 const winCombos = [   
     //row combos
     {combo: [1, 2, 3], winClass: "row1"},

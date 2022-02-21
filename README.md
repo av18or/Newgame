@@ -5,6 +5,13 @@ The game is X vs O. First three in a row wins.
 
 Inspiration, ideas, and help for this project came from the following sources:
 
+
+First and most importantly: The instructors teaching the full stack development bootcamp for UNLV!
+
+
+
+Sources of ideas specific to the game created in this project:
+
 1. "Build Tic Tac Toe with JavaScript" by Web Dev Simplified: https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw
 
 2. "Pretty Tic Tac Toe" by Emily Goldfein:
@@ -15,3 +22,15 @@ https://dev.to/javascriptacademy/create-a-simple-tic-tac-toe-game-using-html-css
 
 4. "How to Build Tic Tac Toe with JavaScript, HTML, and CSS" by Coding With Adam: 
 https://www.youtube.com/watch?v=fPew9OI2PnA
+
+
+
+Various sources of information for the understanding and implementation of JavaScript/CSS/HTML used in this project:
+
+W3 schools: https://www.w3schools.com/
+
+MDN Web Docs: https://developer.mozilla.org/en-US/
+
+Slider Revolution: https://www.sliderrevolution.com/
+
+YouTube: https://www.youtube.com 
