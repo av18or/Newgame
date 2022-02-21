@@ -8,19 +8,28 @@
     <title>Clay's new game</title>
 </head>
 <body>
-    <!--game board consisting of 9 divs with class name of "cell"-->
+    <!--game .board consisting of 9 divs with class name of "cell"-->
     <div class="board">
-        <div class="cell"></div>
-        <div class="cell" ></div>
-        <div class="cell" ></div>
-        <div class="cell" ></div>
-        <div class="cell" ></div>
-        <div class="cell" ></div>
-        <div class="cell" ></div>
-        <div class="cell" ></div>
-        <div class="cell" ></div>
+        <div class="cell" id="cell0"></div>
+        <div class="cell" id="cell1"></div>
+        <div class="cell" id="cell2"></div>
+        <div class="cell" id="cell3"></div>
+        <div class="cell" id="cell4"></div>
+        <div class="cell" id="cell5"></div>
+        <div class="cell" id="cell6"></div>
+        <div class="cell" id="cell7"></div>
+        <div class="cell" id="cell8"></div>
       </div>
 
+      <!-- span to display player turns message -->
+      <div class="turn-message">
+          Player <span class="display-player playerX"></span>'s turn
+      </div>
+
+      <!--reset button-->
+      <div class="controls">
+          <button id="Reset">Reset</button>
+      </div>
 
 <script src="code.js" defer></script>    
 </body>

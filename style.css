@@ -50,6 +50,22 @@ body {
     }
   }
 
+  .turn-message {
+      text-align: center;
+      font-size: 2rem;
+      font-family: arial;
+  }
+  
+  .controls {
+      text-align: center;
+  }
+
+  button {
+    font-size: 2rem;
+    font-family: arial;
+    border-radius: 5px;
+  }
+
 
   /* add media query to allow for mobile device usage */
   @media only screen and (max-width: 600px) {
@@ -57,7 +73,7 @@ body {
 
      /* .board class */
     .board {     
-        width: 90vw;
+        width: 100vw;
         height: 50vh;
         display: grid;
         justify-content: center;
@@ -74,14 +90,14 @@ body {
     .cell {
         width: 80px;
         height: 80px;
-        border: 3px solid black;
+        border: 2px solid black;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
         cursor: pointer;
         border-radius: 5px;;
-        margin: 10px;
+        margin: 3px;
         background-color: white;
       }
 
