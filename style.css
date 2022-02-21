@@ -1,10 +1,12 @@
 
+
+
 /* style the body */
 body {
     background-color: white;
 }
 
-/* style board class */
+/* style .board class */
 .board {     
     width: 100vw;
     height: 80vh;
@@ -19,8 +21,8 @@ body {
 
   /* style cell class */
 .cell {
-    width: 5vw;
-    height: 10vh;
+    width: 150px;
+    height: 150px;
     border: 3px solid black;
     display: flex;
     justify-content: center;
@@ -34,8 +36,9 @@ body {
 
   /* adds animation on hover of each .cell class. (makes each square spin) */
   .cell:hover {
-    animation-duration: 1s;
+    animation-duration: .5s;
     animation-name: spin1;
+    background-color: rgba(0, 255, 255, 0.541);
   }
 
   /* this keyframe defines paramaters for our "spin1" animation */
@@ -48,8 +51,39 @@ body {
   }
 
 
-
+  /* add media query to allow for mobile device usage */
   @media only screen and (max-width: 600px) {
 
+
+     /* .board class */
+    .board {     
+        width: 90vw;
+        height: 50vh;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: repeat(3, auto);
+        padding-left: 10px;
+        padding-right: 10px;
+        
+      }
     
+      /* .cell class */
+    .cell {
+        width: 80px;
+        height: 80px;
+        border: 3px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        border-radius: 5px;;
+        margin: 10px;
+        background-color: white;
+      }
+
+
   }
