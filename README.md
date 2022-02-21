@@ -3,7 +3,7 @@ The game is X vs O. First three in a row wins.
 # Newgame
 
 
-Inspiration and ideas for this project came from the following sources:
+Inspiration, ideas, and help for this project came from the following sources:
 
 1. "Build Tic Tac Toe with JavaScript" by Web Dev Simplified: https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw
 
@@ -13,3 +13,5 @@ https://lab.iamrohit.in/eg/?s=UHJldHR5IFRpYyBUYWMgVG9lJCQkXl5eaHR0cHM6Ly9jb2RlcG
 3. "Tic Tac Toe Game for Beginners" by Adam Nagy:
 https://dev.to/javascriptacademy/create-a-simple-tic-tac-toe-game-using-html-css-javascript-i4k
 
+4. "How to Build Tic Tac Toe with JavaScript, HTML, and CSS" by Coding With Adam: 
+https://www.youtube.com/watch?v=fPew9OI2PnA
