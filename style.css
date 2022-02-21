@@ -41,6 +41,24 @@ body {
     background-color: rgba(0, 255, 255, 0.541);
   }
 
+ /* display X letter on hover*/
+ .x-hover:hover::after {
+    content: "X";
+    color: black;
+    opacity: 1.0;
+    font-family: arial;
+    font-size: 6rem;
+}
+ /* display O letter on hover */
+.o-hover:hover::after {
+content: "O";
+color: black;
+opacity: 1.0;
+font-family: arial;
+font-size: 6rem;
+}
+
+
   /* this keyframe defines paramaters for our "spin1" animation */
   @keyframes spin1 { 
     from {                          
@@ -49,6 +67,8 @@ body {
         transform: rotate(180deg); 
     }
   }
+
+ 
 
 
   /* styling for our turn message and reset button */
