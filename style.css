@@ -58,26 +58,6 @@ h1 {
 
 
 
-
-/* display X letter on hover*/
-.x-hover:hover::after {
-    content: "X";
-    color: black;
-    opacity: 1.0;
-    font-family: arial;
-    font-size: 6rem;
-}
- /* display O letter on hover */
-.o-hover:hover::after {
-    content: "O";
-    color: black;
-    opacity: 1.0;
-    font-family: arial;
-    font-size: 6rem;
-}
-
-
-
   /* adds animation on hover of each .cell class. (makes each square spin) */
   .cell:hover {
     animation-duration: .5s;
@@ -106,8 +86,7 @@ h1 {
 
  
 
-
-  /* styling for our turn message and reset button */
+  /* styling for our message and reset button */
   #game-over-text {
       text-align: center;
       font-size: 2rem;
