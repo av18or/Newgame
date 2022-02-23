@@ -108,11 +108,11 @@ function checkWin(){             // for-of statement is used to loop over all wi
  }
 
 // function to check for a tie if every square is filled in without a win
-    const allCellsFilled = gameBoard.every((cell) => cell !== null);  //checks all cells in gameBoard array using an arrow function to determine that they are all NOT EQUAL to null/empty
+    const allCellsFilled = gameBoard.every((cell) => cell !== null);  //checks all cells in gameBoard array to determine that they are all NOT EQUAL to null/empty
     if(allCellsFilled) {     //if allCellsFilled returns true, then..
         gameOverScreen();   //run gameOverScreen function 
-    }
-}
+    }      // using the .every method executes a function for each array element. all elements must be true in order for the method to return true. 
+}          // https://www.w3schools.com/jsref/jsref_every.asp
 
 
 
