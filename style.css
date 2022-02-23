@@ -114,7 +114,7 @@ h1 {
      /* .board class */
     .board {     
         width: 90vw;
-        height: 50vh;
+        height: 30vh;
         display: grid;
         justify-content: center;
         align-content: center;
@@ -140,6 +140,13 @@ h1 {
         margin: 3px;
         background-color: white;
       }
+
+      h1 {
+        font-family: arial;
+        text-align: center;
+        padding-top: 5rem;
+      }
+
 
       .turn-message {
         text-align: center;
